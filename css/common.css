@@ -1,0 +1,21 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+h2.sc_title {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.over_txt {display: block;overflow: hidden;}
+
+.over_txt span {display: block;}
+
+
