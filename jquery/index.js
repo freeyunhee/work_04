@@ -49,6 +49,8 @@ $(function(){
 
         sc_info = $('.sc_info').offset().top + 250;
 
+        sc_business = $('.sc_business').offset().top - 300;
+
         if(curr > 150){
             $('header').addClass('hov');
         }else{
@@ -64,8 +66,14 @@ $(function(){
     // 스크롤바가 맨 위를 찍을 때 메뉴 gnb 표출    
         if (curr < 1){
             $('header').removeClass('hide');
-            txt_up.restart();
         }
+
+        if(curr > sc_business){
+            $('.fixed_btn_area').addClass('show');
+        }else{
+            $('.fixed_btn_area').removeClass('show');
+        }
+
     });
 
     // 스크롤 방향에 따라 헤더 표출 & 숨김
@@ -75,11 +83,9 @@ $(function(){
         if(wheel>0){
         //스크롤 올릴때
             $('header').removeClass('hide');
-            $('.fixed_btn_area').removeClass('show');
         } else {
         //스크롤 내릴때
             $('header').addClass('hide');
-            $('.fixed_btn_area').addClass('show');
         }
     });
 

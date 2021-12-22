@@ -135,7 +135,7 @@ main {
 
 .sc_intro .swiper-slide .txt_area {
     width: 100%;
-    top: 20%;
+    top: 30%;
     left: 20%;
     position: absolute;
     z-index: 1100;
@@ -260,9 +260,6 @@ main {
     line-height: 1.6;
     font-weight: 400;
 }
-
-
-/* .sc_business .content .business_item .txt_area .over_txt {display: block;overflow: hidden;} */
 
 .sc_business .content .business_item .txt_area .over_txt span {transform: translateY(100%);opacity:0;transition: 0.3s;}
 .sc_business .content .business_item:hover .txt_area .over_txt span {transform: translateY(0);opacity:1;}
@@ -781,7 +778,7 @@ main {
 }
 
 .sc_info .content .btn_download:hover {
-    border: 8px solid rgb(249, 234, 131);
+    transform: scale(1.1);
 }
 
 .sc_info .content .btn_download .icon_download {

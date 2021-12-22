@@ -21,7 +21,7 @@ header {
     position: fixed;
     top: 0;left: 0;width: 100%;
     z-index: 10;
-    transition: all 0.5s;
+    transition: 0.5s;
 }
 
 header.hide {
@@ -177,7 +177,7 @@ header.hov .util .btn_thesharp {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all .3s;
+    transition: .3s;
 }
 
 .special_story .sub_menu .sub_item a:hover .bg {
@@ -407,6 +407,9 @@ header .util .btn_thesharp {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
+    overflow: scroll;
+
+
 }
 
 .all_menu.on {
@@ -436,6 +439,8 @@ header .util .btn_thesharp {
     cursor: pointer;
     background-repeat: no-repeat;
 }
+
+.all_menu .sitemap {}
 
 .all_menu .depth1_group {
     display: flex;
