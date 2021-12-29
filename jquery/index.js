@@ -10,13 +10,13 @@ $(function(){
     })
 
     // gnb 하위 메뉴 표출 & 숨김
-    $('.gnb .main_item').mouseover(function(){
-        $('.gnb .main_item').removeClass('on');
+    $('.gnb > ul .depth1').mouseover(function(){
+        $('.gnb > ul .depth1').removeClass('on');
         $(this).addClass('on');
     })
     
-    $('.gnb .main_item').mouseleave(function(){
-        $('.gnb .main_item').removeClass('on');
+    $('.gnb > ul .depth1').mouseleave(function(){
+        $('.gnb > ul .depth1').removeClass('on');
     })
 
     // 사이트맵 표출 
@@ -49,7 +49,7 @@ $(function(){
 
         sc_info = $('.sc_info').offset().top + 250;
 
-        sc_business = $('.sc_business').offset().top - 300;
+        sc_introduce = $('.sc_introduce').offset().top - 300;
 
         if(curr > 150){
             $('header').addClass('hov');
@@ -68,7 +68,7 @@ $(function(){
             $('header').removeClass('hide');
         }
 
-        if(curr > sc_business){
+        if(curr > sc_introduce){
             $('.fixed_btn_area').addClass('show');
         }else{
             $('.fixed_btn_area').removeClass('show');
@@ -114,56 +114,56 @@ $(function(){
     })
 
 
-   // sc_intro swiper 
-    var swiper = new Swiper(".intro_slide", {
+   // sc_main_item swiper 
+    var swiper = new Swiper(".main_item_slide", {
 
     pagination: {
-        el: ".sc_intro .nav",
+        el: ".sc_main_item .nav",
         clickable: true,
     },
 
     navigation: {
-        nextEl: ".intro_slide .next",
-        prevEl: ".intro_slide .prev",
+        nextEl: ".main_item_slide .next",
+        prevEl: ".main_item_slide .prev",
     },
 
     on:{
         slideChange:function(){
             idx = this.realIndex+1;
-            $('.intro_slide .curr').text(idx);
+            $('.main_item_slide .curr').text(idx);
         },
     },
     });
 
-    introCnt = $('.intro_slide .swiper-slide').length;
+    main_itemCnt = $('.main_item_slide .swiper-slide').length;
         
-    $('.intro_slide .total').text(introCnt);
+    $('.main_item_slide .total').text(main_itemCnt);
 
 
-    // sc_business swiper    
-    var swiper = new Swiper(".business_slide", {
+    // sc_awards swiper    
+    var swiper = new Swiper(".awards_slide", {
 
     pagination: {
-        el: ".business_slide .num",
+        el: ".awards_slide .num",
         type: "fraction",
     },
 
     navigation: {
-        nextEl: ".business_slide .next",
-        prevEl: ".business_slide .prev",
+        nextEl: ".awards_slide .next",
+        prevEl: ".awards_slide .prev",
     },
 
     on:{
         slideChange:function(){
             idx = this.realIndex+1;
-            $('.business_slide .curr').text(idx);
+            $('.awards_slide .curr').text(idx);
         },
     },
     });
 
-    introCnt = $('.business_slide .swiper-slide').length;
+    introCnt = $('.awards_slide .swiper-slide').length;
         
-    $('.business_slide .total').text(introCnt);
+    $('.awards_slide .total').text(introCnt);
 
     // sc_innovation swiper
     menu_arr = ['GENESIS X CONCEPT','MINT CONCEPT','ESSENTIA CONCEPT',]
